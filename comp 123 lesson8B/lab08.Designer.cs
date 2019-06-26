@@ -1,6 +1,6 @@
 ﻿namespace comp_123_lesson8B
 {
-    partial class lab08
+    partial class outputlable
     {
         /// <summary>
         /// Required designer variable.
@@ -32,9 +32,10 @@
             this.inforgroupbox = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.nametextBox = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.agetextbox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.submitbutton = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.inforgroupbox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,14 +53,14 @@
             // inforgroupbox
             // 
             this.inforgroupbox.BackColor = System.Drawing.Color.DarkGray;
-            this.inforgroupbox.Controls.Add(this.textBox1);
+            this.inforgroupbox.Controls.Add(this.agetextbox);
             this.inforgroupbox.Controls.Add(this.label2);
             this.inforgroupbox.Controls.Add(this.nametextBox);
             this.inforgroupbox.Controls.Add(this.label1);
             this.inforgroupbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inforgroupbox.Location = new System.Drawing.Point(44, 63);
             this.inforgroupbox.Name = "inforgroupbox";
-            this.inforgroupbox.Size = new System.Drawing.Size(361, 133);
+            this.inforgroupbox.Size = new System.Drawing.Size(435, 166);
             this.inforgroupbox.TabIndex = 1;
             this.inforgroupbox.TabStop = false;
             this.inforgroupbox.Text = "infor";
@@ -83,15 +84,16 @@
             this.nametextBox.Name = "nametextBox";
             this.nametextBox.Size = new System.Drawing.Size(146, 38);
             this.nametextBox.TabIndex = 1;
+            this.nametextBox.TextChanged += new System.EventHandler(this.nametextBox_TextChanged);
             // 
-            // textBox1
+            // agetextbox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(196, 77);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(146, 38);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.agetextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.agetextbox.Location = new System.Drawing.Point(196, 77);
+            this.agetextbox.Name = "agetextbox";
+            this.agetextbox.Size = new System.Drawing.Size(146, 38);
+            this.agetextbox.TabIndex = 3;
+            this.agetextbox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
@@ -116,20 +118,33 @@
             this.submitbutton.TabIndex = 2;
             this.submitbutton.Text = "submit";
             this.submitbutton.UseVisualStyleBackColor = false;
+            this.submitbutton.Click += new System.EventHandler(this.submitbutton_Click);
             // 
-            // lab08
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(26, 354);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(146, 31);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "enter age:";
+            // 
+            // outputlable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(624, 441);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.submitbutton);
             this.Controls.Add(this.inforgroupbox);
             this.Controls.Add(this.titlelabel);
             this.ForeColor = System.Drawing.Color.Coral;
-            this.Name = "lab08";
+            this.Name = "outputlable";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
             this.Load += new System.EventHandler(this.lab08_Load);
             this.inforgroupbox.ResumeLayout(false);
             this.inforgroupbox.PerformLayout();
@@ -144,9 +159,10 @@
         private System.Windows.Forms.GroupBox inforgroupbox;
         private System.Windows.Forms.TextBox nametextBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox agetextbox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button submitbutton;
+        private System.Windows.Forms.Label label3;
     }
 }
 
